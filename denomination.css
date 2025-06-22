@@ -1,0 +1,286 @@
+* {
+
+  padding: 0%;
+  margin: 0%;
+}
+
+.ho tr td {
+  display: flex;
+  text-align: center;
+  margin-top: 5px;
+  padding: 0px
+}
+
+.five {
+  margin-left: 20px;
+  margin: 5px;
+
+
+}
+
+input {
+  border-radius: 20px;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bolder;
+  color: rgb(75, 131, 38);
+  text-align: center;
+
+}
+
+.fi {
+  width: 80px;
+  height: 30px;
+  margin-top: 10px;
+  padding: 0px;
+  font-size: 25px;
+  color: black;
+}
+
+.ve {
+  width: 170px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.eq {
+
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 7px;
+}
+
+.h1 {
+  padding-right: 20px;
+
+}
+
+.six {
+  margin-left: 20px;
+}
+
+.seven,
+.ten {
+  margin-left: 20px;
+}
+
+.coin {
+  margin-left: -12px;
+}
+
+.ho {
+  margin-top: 20px;
+}
+
+.fv {
+  margin-left: 20px;
+  margin-top: 40px;
+  width: 250px;
+  color: rgb(54, 65, 161);
+}
+
+.tot {
+  margin-top: 35px;
+}
+
+.total {
+  margin-left: 90px;
+}
+
+.amt {
+  display: flex;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-top: 20px;
+  margin-top: 20px;
+
+}
+
+.am,
+.am2 {
+  width: 200px;
+  margin: 20px;
+}
+
+.am3 {
+
+  width: 170px;
+  height: 50px;
+  padding: 8px
+}
+
+.h3 {
+  display: flex;
+  padding: 0px;
+}
+
+.sub,
+.equ {
+  padding: 20px;
+  height: 2px;
+  font-size: 30px;
+
+}
+
+.result1 {
+  margin-left: 580px;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: -20px;
+  color: yellow;
+}
+
+body {
+  background-color: rgb(24, 80, 24);
+}
+
+.ho {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 30px 30px;
+  margin-bottom: -30px;
+  margin-top: -40px;
+}
+
+.den {
+  margin-right: 1000px;
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+}
+
+.tot {
+  color: rgb(167, 23, 23);
+}
+
+.am {
+  color: rgb(54, 65, 161);
+}
+
+.am2 {
+  color: darkgoldenrod;
+}
+
+@media (max-width:400px) {
+  .ho {
+    font-size: -24px;
+    padding: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .fi {
+    margin-left: 2px;
+  }
+
+  .h1 {
+    padding-right: 10px;
+    font-size: 20px;
+    margin-top: 5px;
+  }
+
+  .eq {
+
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 0px;
+  }
+
+  .ve {
+    width: 150px;
+  }
+
+  .total {
+    margin-left: 20px;
+    padding: 0%;
+  }
+
+  .fv {
+    margin-top: 15px;
+    height: 35px;
+  }
+
+  .tot {
+    margin-top: 15px;
+  }
+
+  .fi,
+  .ve {
+    height: 30px;
+    padding: 0%;
+
+  }
+
+  .six,
+  .seven,
+  .ten {
+    margin-left: 17px;
+  }
+
+  .coin {
+    margin-left: -2px;
+  }
+
+  .fv {
+    width: 170px;
+  }
+
+  .den {
+    font-size: 30px;
+  }
+
+  .hi {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .amt {
+    margin: 0px;
+    margin-left: 0px;
+    display: flex;
+  }
+
+  .sub,
+  .equ {
+  margin-left: -40px;
+    font-size: 20px;
+    padding: 20px;
+
+  }
+
+  .am,
+  .am2
+   {
+    width: 100px;
+    height:40px;
+padding:0px;
+margin-left: -15px;
+font-size: 15px;
+  }
+  .main, .main2{
+    display: inline-block;
+  }
+  .am3{
+     width: 100px;
+    height:20px;
+    margin-top: 18px;
+    font-size: 18px;
+  }
+  .result1 {
+  margin-left: 100px;
+  margin-top: 0px;
+  font-size: 25px;
+  font-weight: bold;
+ 
+  color: yellow;
+}
+.fi{
+  font-size: 20px;
+}
+.ve{
+    font-size: 22px;
+}
+.fi,.ve{
+  margin-top: 5px;
+}
+}

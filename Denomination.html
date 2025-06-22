@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denomination</title>
+    <link rel="stylesheet" href="denomination.css">
+</head>
+
+<body><center>
+    <table class="ho">
+        <tr><h1 class="den">Denomination</h1>
+            <td class="five"><h1 class="h1">500 ✕ </h1><input class="fi" id="a" type="number" oninput="five()"><h1 class="eq">=</h1><input class="ve" id="b"></td>
+        </tr>
+        <tr>
+            <td class="five"><h1 class="h1">200 ✕ </h1><input class="fi" id="d" type="number" oninput="two()"><h1 class="eq">=</h1><input class="ve" id="e"></td>
+        </tr>
+        <tr>
+            <td class="five"><h1 class="h1">100 ✕ </h1><input class="fi" id="g" type="number" oninput="hun()"><h1 class="eq">=</h1><input class="ve" id="h"></td>
+        </tr>
+        <tr>
+            <td class="six"><h1 class="h1">50 ✕ </h1><input class="fi" id="j" type="number" oninput="fifty()"><h1 class="eq">=</h1><input class="ve" id="k"></td>
+        </tr>
+        <tr>
+            <td class="seven"><h1 class="h1">20 ✕ </h1><input class="fi" id="m" type="number" oninput="twenty()"><h1 class="eq">=</h1><input class="ve" id="n"></td>
+        </tr>
+        <tr>
+            <td class="ten"><h1 class="h1">10 ✕ </h1><input class="fi" id="p" type="number" oninput="ten()"><h1 class="eq">=</h1><input class="ve" id="q"></td>
+        </tr>
+        <tr>
+            <td class="coin"><h1 class="h1">Coin ✕ </h1><input class="fi" id="s" type="number" oninput="coin()"><h1 class="eq">=</h1><input class="ve" id="t"></td>
+        </tr>
+        <tr>
+            <td class="total">
+                <h1 id="tal" class="tot">Total</h1><input class="fv" id="tot" type="number" readonly>
+            </td>
+        </tr>
+
+    </table></center><center>
+    <table class="hi">
+    <tr class="amg">
+       
+        <td class="amt"><div class="main"><h1 class="sub">Total Amt</h1><input class="am" id="tot2" type="number" readonly></div><h1 class="sub">-</h1>
+        
+        <div class="main2"><h1 class="equ">Topsheet Amt</h1><input class="am2" id="top" type="number" oninput="topsheet()"></div><h1 class="equ">=</h1>
+      
+        <input class="am3" id="ans" type="number" readonly></td>
+        
+    </tr>
+    </table></center>
+
+    <p class="result1" id="result"  readonly></p>
+</body>
+
+</html>
+<script>
+    function five() {
+        var a = parseInt(document.getElementById("a").value);
+        var c = 500 * a;
+        document.getElementById("b").value = c;
+        total();
+    }
+    function two() {
+        var d = parseInt(document.getElementById("d").value);
+        var f = 200 * d;
+        document.getElementById("e").value = f;
+        total();
+    }
+    function hun() {
+        var g = parseInt(document.getElementById("g").value);
+        var i = 100 * g;
+        document.getElementById("h").value = i;
+        total();
+    }
+    function fifty() {
+        var j = parseInt(document.getElementById("j").value);
+        var l = 50 * j;
+        document.getElementById("k").value = l;
+        total();
+    }
+    function twenty() {
+        var m = parseInt(document.getElementById("m").value);
+        var o = 20 * m;
+        document.getElementById("n").value = o;
+        total();
+    }
+    function ten() {
+        var p = parseInt(document.getElementById("p").value);
+        var r = 10 * p;
+        document.getElementById("q").value = r;
+        total();
+    }
+    function coin() {
+        var s = parseInt(document.getElementById("s").value);
+        var u = 1 * s;
+        document.getElementById("t").value = u;
+        total();
+    }
+    function total() {
+        var b = parseInt(document.getElementById("b").value) || 0;
+        var e = parseInt(document.getElementById("e").value) || 0;
+        var h = parseInt(document.getElementById("h").value) || 0;
+        var k = parseInt(document.getElementById("k").value) || 0;
+        var n = parseInt(document.getElementById("n").value) || 0;
+        var q = parseInt(document.getElementById("q").value) || 0;
+        var t = parseInt(document.getElementById("t").value) || 0;
+        var tt = b + e + h + k + n + q + t;
+        document.getElementById("tot").value = tt;
+        document.getElementById("tot2").value = tt;
+         topsheet();
+    }
+    function topsheet() {
+        var b = parseInt(document.getElementById("b").value) || 0;
+        var e = parseInt(document.getElementById("e").value) || 0;
+        var h = parseInt(document.getElementById("h").value) || 0;
+        var k = parseInt(document.getElementById("k").value) || 0;
+        var n = parseInt(document.getElementById("n").value) || 0;
+        var q = parseInt(document.getElementById("q").value) || 0;
+        var t = parseInt(document.getElementById("t").value) || 0;
+
+        var z = parseInt(document.getElementById("top").value) || 0;
+        var tt = b + e + h + k + n + q + t;
+        var y = tt - z;
+        document.getElementById("ans").value = y;
+     result();
+    }
+    function result() {
+
+    
+    var b = parseInt(document.getElementById("b").value) || 0;
+    var e = parseInt(document.getElementById("e").value) || 0;
+    var h = parseInt(document.getElementById("h").value) || 0;
+    var k = parseInt(document.getElementById("k").value) || 0;
+    var n = parseInt(document.getElementById("n").value) || 0;
+    var q = parseInt(document.getElementById("q").value) || 0;
+    var t = parseInt(document.getElementById("t").value) || 0;
+
+    var z = parseInt(document.getElementById("top").value) || 0;
+    var tt = b + e + h + k + n + q + t;
+    var y = tt - z;
+
+    if (z == tt) {
+         document.getElementById("result").innerText = "WELDONE (The money has tallied)";
+    }
+    else if(z <= tt){
+        document.getElementById("result").innerText = "Money is in excess";
+
+    } 
+    else {
+        document.getElementById("result").innerText = "The money is less";
+    }
+}
+
+
+    
+
+
+</script>
