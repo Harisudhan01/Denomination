@@ -33,7 +33,7 @@
         </tr>
         <tr>
             <td class="total">
-                <h1 id="tal" class="tot">Total</h1><input class="fv" id="tot" type="number" readonly>
+                <h1 id="tal" class="tot">Total</h1><input class="fv" id="tot" type="text" readonly>
             </td>
         </tr>
 
@@ -41,11 +41,11 @@
     <table class="hi">
     <tr class="amg">
        
-        <td class="amt"><div class="main"><h1 class="sub">Total Amt</h1><input class="am" id="tot2" type="number" readonly></div><h1 class="sub">-</h1>
+        <td class="amt"><div class="main"><h1 class="sub">Total Amt</h1><input class="am" id="tot2" type="text" readonly></div><h1 class="sub">-</h1>
         
-        <div class="main2"><h1 class="equ">Topsheet</h1><input class="am2" id="top" type="number" oninput="topsheet()"></div><h1 class="equ">=</h1>
+        <div class="main2"><h1 class="equ">Topsheet</h1><input class="am2" id="top" type="text" oninput="topsheet()"></div><h1 class="equ">=</h1>
       
-        <input class="am3" id="ans" type="number" readonly></td>
+        <input class="am3" id="ans" type="text" readonly></td>
         
     </tr>
     </table></center>
@@ -58,90 +58,90 @@
     function five() {
         var a = parseInt(document.getElementById("a").value);
         var c = 500 * a;
-        document.getElementById("b").value = c;
+        document.getElementById("b").value = c.toLocaleString('en-IN');
         total();
     }
     function two() {
         var d = parseInt(document.getElementById("d").value);
         var f = 200 * d;
-        document.getElementById("e").value = f;
+        document.getElementById("e").value = f.toLocaleString('en-IN');
         total();
     }
     function hun() {
         var g = parseInt(document.getElementById("g").value);
         var i = 100 * g;
-        document.getElementById("h").value = i;
+        document.getElementById("h").value = i.toLocaleString('en-IN');
         total();
     }
     function fifty() {
         var j = parseInt(document.getElementById("j").value);
         var l = 50 * j;
-        document.getElementById("k").value = l;
+        document.getElementById("k").value = l.toLocaleString('en-IN');
         total();
     }
     function twenty() {
         var m = parseInt(document.getElementById("m").value);
         var o = 20 * m;
-        document.getElementById("n").value = o;
+        document.getElementById("n").value = o.toLocaleString('en-IN');
         total();
     }
     function ten() {
         var p = parseInt(document.getElementById("p").value);
         var r = 10 * p;
-        document.getElementById("q").value = r;
+        document.getElementById("q").value = r.toLocaleString('en-IN');
         total();
     }
     function coin() {
         var s = parseInt(document.getElementById("s").value);
         var u = 1 * s;
-        document.getElementById("t").value = u;
+        document.getElementById("t").value = u.toLocaleString('en-IN');
         total();
     }
     function total() {
-        var b = parseInt(document.getElementById("b").value) || 0;
-        var e = parseInt(document.getElementById("e").value) || 0;
-        var h = parseInt(document.getElementById("h").value) || 0;
-        var k = parseInt(document.getElementById("k").value) || 0;
-        var n = parseInt(document.getElementById("n").value) || 0;
-        var q = parseInt(document.getElementById("q").value) || 0;
-        var t = parseInt(document.getElementById("t").value) || 0;
+        var b = parseInt(document.getElementById("b").value.replace(/,/g,'')) || 0;
+        var e = parseInt(document.getElementById("e").value.replace(/,/g,'')) || 0;
+        var h = parseInt(document.getElementById("h").value.replace(/,/g,'')) || 0;
+        var k = parseInt(document.getElementById("k").value.replace(/,/g,'')) || 0;
+        var n = parseInt(document.getElementById("n").value.replace(/,/g,'')) || 0;
+        var q = parseInt(document.getElementById("q").value.replace(/,/g,'')) || 0;
+        var t = parseInt(document.getElementById("t").value.replace(/,/g,'')) || 0;
         var tt = b + e + h + k + n + q + t;
-        document.getElementById("tot").value = tt;
-        document.getElementById("tot2").value = tt;
+        document.getElementById("tot").value = tt.toLocaleString('en-IN');
+        document.getElementById("tot2").value = tt.toLocaleString('en-IN');
          topsheet();
     }
     function topsheet() {
-        var b = parseInt(document.getElementById("b").value) || 0;
-        var e = parseInt(document.getElementById("e").value) || 0;
-        var h = parseInt(document.getElementById("h").value) || 0;
-        var k = parseInt(document.getElementById("k").value) || 0;
-        var n = parseInt(document.getElementById("n").value) || 0;
-        var q = parseInt(document.getElementById("q").value) || 0;
-        var t = parseInt(document.getElementById("t").value) || 0;
+        var b = parseInt(document.getElementById("b").value.replace(/,/g,'')) || 0;
+        var e = parseInt(document.getElementById("e").value.replace(/,/g,'')) || 0;
+        var h = parseInt(document.getElementById("h").value.replace(/,/g,'')) || 0;
+        var k = parseInt(document.getElementById("k").value.replace(/,/g,'')) || 0;
+        var n = parseInt(document.getElementById("n").value.replace(/,/g,'')) || 0;
+        var q = parseInt(document.getElementById("q").value.replace(/,/g,'')) || 0;
+        var t = parseInt(document.getElementById("t").value.replace(/,/g,'')) || 0;
 
         var z = parseInt(document.getElementById("top").value) || 0;
         var tt = b + e + h + k + n + q + t;
         var y = tt - z;
-        document.getElementById("ans").value = y;
+        document.getElementById("ans").value = y.toLocaleString('en-IN');
      result();
     }
     function result() {
 
     
-    var b = parseInt(document.getElementById("b").value) || 0;
-    var e = parseInt(document.getElementById("e").value) || 0;
-    var h = parseInt(document.getElementById("h").value) || 0;
-    var k = parseInt(document.getElementById("k").value) || 0;
-    var n = parseInt(document.getElementById("n").value) || 0;
-    var q = parseInt(document.getElementById("q").value) || 0;
-    var t = parseInt(document.getElementById("t").value) || 0;
+    var b = parseInt(document.getElementById("b").value.replace(/,/g,'')) || 0;
+    var e = parseInt(document.getElementById("e").value.replace(/,/g,'')) || 0;
+    var h = parseInt(document.getElementById("h").value.replace(/,/g,'')) || 0;
+    var k = parseInt(document.getElementById("k").value.replace(/,/g,'')) || 0;
+    var n = parseInt(document.getElementById("n").value.replace(/,/g,'')) || 0;
+    var q = parseInt(document.getElementById("q").value.replace(/,/g,'')) || 0;
+    var t = parseInt(document.getElementById("t").value.replace(/,/g,'')) || 0;
 
-    var z = parseInt(document.getElementById("top").value) || 0;
+    var z = parseInt(document.getElementById("top").value.replace(/,/g,'')) || 0;
     var tt = b + e + h + k + n + q + t;
     var y = tt - z;
 
     if (z == tt) {
-         document.getElementById("result").innerText = "The money has tallied";
+         document.getElementById("result").innerText = "WELDONE";
     }
     else if(z <= tt){
         document.getElementById("result").innerText = "Money is in excess";
